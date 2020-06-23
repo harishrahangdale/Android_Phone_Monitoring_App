@@ -27,15 +27,15 @@ class AppSettings {
     private Context context;
 
     private static final String settingsFileName = "phonemonitorsettings.json";
-    private static final String getSettingsURL = "https://cypmanager.com/getsettings.php";
+    private static final String getSettingsURL = "https://yourdomain.com/getsettings.php";
 
-    private static final String reportURL = "https://cypmanager.com/report.php";
-    private static final String commandsURL = "https://cypmanager.com/getcommands.php";
-    private static final String outputURL = "https://cypmanager.com/setoutput.php";
-    private static final String ftpServer = "ftp.cypmanager.com";
+    private static final String reportURL = "https://yourdomain.com/report.php";
+    private static final String commandsURL = "https://yourdomain.com/getcommands.php";
+    private static final String outputURL = "https://yourdomain.com/setoutput.php";
+    private static final String ftpServer = "ftp.yourdomain.com";
     private static final int ftpPort = 21;
-    private static final String ftpUsername = "admin@cypmanager.com";
-    private static final String ftpPassword = "Jalgaon@2020";
+    private static final String ftpUsername = "admin@yourdomain.com";
+    private static final String ftpPassword = "Password@2020";
 
     private static final Boolean forceWifiOnForRecordUpload_failsafe = false;
     private static final int serverTalkInterval_failsafe = 1000;
