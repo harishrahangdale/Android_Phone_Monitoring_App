@@ -1,0 +1,7 @@
+#Sat Jun 20 11:09:30 IST 2020
+base.0=C\:\\Users\\haris\\Desktop\\Elite\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=C\:\\Users\\haris\\Desktop\\Elite\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
