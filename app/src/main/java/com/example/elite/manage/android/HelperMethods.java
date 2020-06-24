@@ -27,7 +27,7 @@ import static android.content.Context.ALARM_SERVICE;
 public class HelperMethods {
 
 
-    static boolean isInternetAvailable(Context context) {
+    /*static boolean isInternetAvailable(Context context) {
         boolean retval = false;
         try {
             ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -45,10 +45,10 @@ public class HelperMethods {
             Log.w(AppSettings.getTAG(), "NullPointerException @ HelperMethods.iInternetAvailable");
         }
         return retval;
-    }
+    }*/
 
 
-    /*static boolean isInternetAvailable(Context context) {
+    static boolean isInternetAvailable(Context context) {
         boolean retval = false;
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
 
@@ -82,7 +82,7 @@ public class HelperMethods {
         }
         //Log.i("update_statut","Network is available : FALSE ");
         return retval;
-    }*/
+    }
 
 
     static void waitWithTimeout(Callable testCallable, Object breakValue, long timeoutmillisecond) throws Exception {
@@ -184,10 +184,7 @@ public class HelperMethods {
             alarmManager.cancel(pendingIntent);//kill any pre-existing alarms
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
                 alarmManager.setExactAndAllowWhileIdle(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + 60000, pendingIntent);
-            else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT)
-                alarmManager.setExact(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + 60000, pendingIntent);
-            else
-                alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + 60000, pendingIntent);
+            else alarmManager.setExact(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + 60000, pendingIntent);
         }
     }
 

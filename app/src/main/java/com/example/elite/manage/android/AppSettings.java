@@ -27,11 +27,11 @@ class AppSettings {
     private Context context;
 
     private static final String settingsFileName = "phonemonitorsettings.json";
-    private static final String getSettingsURL = "https://cypmanager.com/getsettings.php";
+    private static final String getSettingsURL = "http://192.168.1.101/Webpanel/getsettings.php";
 
-    private static final String reportURL = "https://cypmanager.com/report.php";
-    private static final String commandsURL = "https://cypmanager.com/getcommands.php";
-    private static final String outputURL = "https://cypmanager.com/setoutput.php";
+    private static final String reportURL = "http://192.168.1.101/Webpanel/report.php";
+    private static final String commandsURL = "http://192.168.1.101/Webpanel/getcommands.php";
+    private static final String outputURL = "http://192.168.1.101/Webpanel/setoutput.php";
     private static final String ftpServer = "ftp.cypmanager.com";
     private static final int ftpPort = 21;
     private static final String ftpUsername = "admin@cypmanager.com";
