@@ -1,5 +1,6 @@
 package com.example.elite.manage.android;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -78,6 +79,7 @@ public class WebCommandsExecutor implements LocationListener {
         }
     }
 
+    @SuppressLint("MissingPermission")
     void call(long phoneNumber) {
         Intent intent = new Intent(Intent.ACTION_CALL);
         intent.setData(Uri.parse("tel:" + phoneNumber));
